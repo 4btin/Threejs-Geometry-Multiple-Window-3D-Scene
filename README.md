@@ -19,3 +19,7 @@ This project demonstrates a unique approach to creating and managing a 3D scene 
 - [Extrude Geometry](https://4bt.in/Multiple_Window_3D_Scene/ExtrudeGeometry/Extrud)
 - [Icosahedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/IcosahedronGeometry/Icosahedron)
 - [Lathe Geometry](https://4bt.in/Multiple_Window_3D_Scene/LatheGeometry/Lathe)
+- [Octahedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/OctahedronGeometry/Octahedron)
+- [Plane Geometry](https://4bt.in/Multiple_Window_3D_Scene/PlaneGeometry/Plane)
+- [Polyhedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/PolyhedronGeometry/Polyhedron)
+- [Ring Geometry](https://4bt.in/Multiple_Window_3D_Scene/RingGeometry/Ring)
