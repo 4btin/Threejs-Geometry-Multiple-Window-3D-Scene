@@ -17,3 +17,5 @@ This project demonstrates a unique approach to creating and managing a 3D scene 
 - [Torus Knot Geometry](https://4bt.in/Multiple_Window_3D_Scene/TorusKnotGeometry/TorusKnot)
 - [Dodecahedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/DodecahedronGeometry/Dodecahedron)
 - [Extrude Geometry](https://4bt.in/Multiple_Window_3D_Scene/ExtrudeGeometry/Extrud)
+- [Icosahedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/IcosahedronGeometry/Icosahedron)
+- [Lathe Geometry](https://4bt.in/Multiple_Window_3D_Scene/LatheGeometry/Lathe)
