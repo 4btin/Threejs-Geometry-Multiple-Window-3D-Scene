@@ -14,7 +14,6 @@ This project demonstrates a unique approach to creating and managing a 3D scene 
 - [Circle Geometry](https://4bt.in/Multiple_Window_3D_Scene/CircleGeometry/Circle)
 - [Cone Geometry](https://4bt.in/Multiple_Window_3D_Scene/ConeGeometry/Cone)
 - [Cylinder Geometry](https://4bt.in/Multiple_Window_3D_Scene/CylinderGeometry/Cylinder)
-- [Torus Knot Geometry](https://4bt.in/Multiple_Window_3D_Scene/TorusKnotGeometry/TorusKnot)
 - [Dodecahedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/DodecahedronGeometry/Dodecahedron)
 - [Extrude Geometry](https://4bt.in/Multiple_Window_3D_Scene/ExtrudeGeometry/Extrud)
 - [Icosahedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/IcosahedronGeometry/Icosahedron)
@@ -23,3 +22,4 @@ This project demonstrates a unique approach to creating and managing a 3D scene 
 - [Plane Geometry](https://4bt.in/Multiple_Window_3D_Scene/PlaneGeometry/Plane)
 - [Polyhedron Geometry](https://4bt.in/Multiple_Window_3D_Scene/PolyhedronGeometry/Polyhedron)
 - [Ring Geometry](https://4bt.in/Multiple_Window_3D_Scene/RingGeometry/Ring)
+- [Torus Knot Geometry](https://4bt.in/Multiple_Window_3D_Scene/TorusKnotGeometry/TorusKnot)
