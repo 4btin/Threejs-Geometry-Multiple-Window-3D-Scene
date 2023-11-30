@@ -219,7 +219,7 @@ if (new URLSearchParams(window.location.search).get("clear")) {
 	}
 	
 	const length = 12, width = 8;
-	const scaleFactor = 10; // Ölçek faktörü, şeklin ne kadar büyüyeceğini belirler.
+	const scaleFactor = 10;
 	
 	const shape = new THREE.Shape();
 	shape.moveTo(0, 0);
