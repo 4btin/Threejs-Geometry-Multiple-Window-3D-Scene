@@ -106,7 +106,7 @@ class WindowManager {
 let camera, scene, renderer, world;
 let near, far;
 let pixR = window.devicePixelRatio ? window.devicePixelRatio : 1;
-let cones = [];
+let cylinders = [];
 let sceneOffsetTarget = {
 	x: 0,
 	y: 0
@@ -192,43 +192,44 @@ if (new URLSearchParams(window.location.search).get("clear")) {
 	}
 
 	function windowsUpdated() {
-		updateNumberOfcones();
+		updateNumberOfcylinders();
 	}
 
-    function updateNumberOfcones() {
+    function updateNumberOfcylinders() {
     let wins = windowManager.getWindows();
-    cones.forEach((c) => {
+    cylinders.forEach((c) => {
         world.remove(c);
     })
 
 
-    cones = [];
+    cylinders = [];
     for (let i = 0; i < wins.length; i++) {
         let win = wins[i];
         let c = new THREE.Color();
 
-        let radius = 80 ;
+        let radiusTop = 70 ;
+        let radiusBottom = 70 ;
         let height = 200 ;
         let radialSegments = 20 ;
-        let heightSegments = 10 ;
+        let heightSegments = 3 ;
         let openEnded = false ;
-        let thetaStart = 3 ;
-		let thetaLength = 7 ;
+        let thetaStart = 5 ;
+        let thetaLength = 7 ;
 
         c.setHSL(i * .1, 1.0, .5);
-        let cone = 
+        let cylinder = 
             new THREE.Mesh(
-            new THREE.ConeGeometry(radius, height, radialSegments, heightSegments, openEnded, thetaStart, thetaLength), 
+            new THREE.CylinderGeometry(radiusTop, radiusBottom, height, radialSegments, heightSegments, openEnded, thetaStart, thetaLength), 
             new THREE.MeshBasicMaterial({
                 color: 0x00ff00,
                 wireframe: true
         }));
         
-        cone.position.x = win.shape.x + (win.shape.w * .5);
-        cone.position.y = win.shape.y + (win.shape.h * .5);
+        cylinder.position.x = win.shape.x + (win.shape.w * .5);
+        cylinder.position.y = win.shape.y + (win.shape.h * .5);
 
-        world.add(cone);
-        cones.push(cone);
+        world.add(cylinder);
+        cylinders.push(cylinder);
     }
 }
 	function updateWindowShape(easing = true) {
@@ -248,18 +249,18 @@ if (new URLSearchParams(window.location.search).get("clear")) {
 		world.position.x = sceneOffset.x;
 		world.position.y = sceneOffset.y;
 		let wins = windowManager.getWindows();
-		for (let i = 0; i < cones.length; i++) {
-			let cone = cones[i];
+		for (let i = 0; i < cylinders.length; i++) {
+			let cylinder = cylinders[i];
 			let win = wins[i];
 			let _time = time;
 			let posTarget = {
 				x: win.shape.x + (win.shape.w * .5),
 				y: win.shape.y + (win.shape.h * .5)
 			};
-			cone.position.x = cone.position.x + (posTarget.x - cone.position.x) * falloff;
-			cone.position.y = cone.position.y + (posTarget.y - cone.position.y) * falloff;
-			cone.rotation.x = _time * .5;
-			cone.rotation.y = _time * .3;
+			cylinder.position.x = cylinder.position.x + (posTarget.x - cylinder.position.x) * falloff;
+			cylinder.position.y = cylinder.position.y + (posTarget.y - cylinder.position.y) * falloff;
+			cylinder.rotation.x = _time * .5;
+			cylinder.rotation.y = _time * .3;
 		};
 		renderer.render(scene, camera);
 		requestAnimationFrame(render);
